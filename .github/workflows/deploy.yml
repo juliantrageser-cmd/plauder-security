@@ -36,6 +36,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Erstellt eine leere .nojekyll Datei, damit GitHub Pages keine Dateien ignoriert
+      - name: Create .nojekyll
+        run: touch ./dist/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
